@@ -1,0 +1,227 @@
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #131313;
+}
+
+.home a {
+    color: white;
+}
+
+a:visited {
+    color: rgb(224, 224, 224);
+}
+
+#myCarousel a {
+    color: white;
+}
+
+.dropdown-menu a:visited {
+    color: rgb(102, 102, 102);
+}
+
+h1,
+h2 {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.button {
+    border: 1px solid #f1f1f1;
+    padding: 12px 40px;
+}
+
+.button:hover {
+    color: #060606;
+    background: #f1f0ef;
+}
+
+.button-white {
+    border: 1px solid #f1f1f1;
+    color: #f1f0ef !important;
+}
+
+.button-white:hover {
+    color: #f1f0ef !important;
+    background: #060606;
+}
+
+.section-description {
+    width: 80%;
+    margin: auto;
+}
+
+.button-container {
+    margin: 80px 0;
+}
+
+.home {
+    background-color: aquamarine;
+}
