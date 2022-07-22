@@ -10,7 +10,7 @@
         @include('partials.errors')
     </header>
 
-    <section class="home">
+    <div class="home">
         <h1>WELCOME TO NANOPETS</h1>
-    </section>
+    </div>
 @endsection
