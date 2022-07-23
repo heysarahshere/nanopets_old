@@ -1,8 +1,8 @@
 <div class="banner ombre-nav">
 </div>
 <nav class="navbar navbar-expand-lg bg-light">
-    <a><img class="navbar-brand nav-logo" src="{{asset(('images/nanopets-logo.png'))}}"/></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <a><img class="navbar-brand nav-logo pt-2" src="{{asset(('images/nanopets-logo.png'))}}"/></a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
