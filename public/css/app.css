@@ -144,7 +144,7 @@ html {
 }
 
 body {
-    background-image: linear-gradient(#30c6fd, #00b2ff);
+    background-image: linear-gradient(#6de6fd, #34dffd);
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -164,7 +164,7 @@ a:visited {
     color: rgb(224, 224, 224);
 }
 
-#myCarousel a {
+#homeCarousel a {
     color: white;
 }
 
@@ -227,6 +227,56 @@ h2 {
     margin: 80px 0;
 }
 
+/* Home */
 .home {
-    height: 100%;
+}
+
+/*------------------ Footer -------------------*/
+.upper-footer {
+    background: url('../images/bg_vs.png') top ;
+    font-size:15px;
+    line-height:24px;
+    color: #28bfe1;
+    top: 0px;
+    background-size:cover;
+    height: 30vh;
+}
+
+.lower-footer {
+    bottom:1vh;
+    background-image: -webkit-linear-gradient(40deg, rgb(7, 77, 5) 50%, rgb(7, 77, 5) 50%);
+    height: 30vh;
+}
+
+footer {
+    position:fixed;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    z-index: 999;
+}
+
+.footer-img {
+    object-fit: fill;
+    max-width:100%;
+}
+/* --------------------- End Footer ------------------------- */
+
+
+#button-addon1 {
+    color: #ffc371;
+}
+
+i {
+    color: #ffc371;
+}
+
+.form-control::placeholder {
+    font-size: 0.95rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.form-control.shadow-0:focus {
+    box-shadow: none;
 }
