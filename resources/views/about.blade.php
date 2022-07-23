@@ -1,11 +1,11 @@
 @extends('layout.master')
 @section('title')
-    Home
+    About
 @endsection
 @section('content')
 
     <div class="home">
-        <h1>WELCOME TO NANOPETS</h1>
+        <h1>ABOUT NANOPETS</h1>
     </div>
 
 @endsection

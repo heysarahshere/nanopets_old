@@ -86,10 +86,45 @@ video {
     border: 0;
     vertical-align: baseline;
 }
+
 html,
 body {
     height: 100%;
 }
+
+/* Fonts */
+@font-face {
+    font-family: Funhouse, Impact;
+    src: url('../fonts/Funhouse.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Readzone;
+    src: url('../fonts/Readzone.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Milky;
+    src: url('../fonts/MilkyNice.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Cool;
+    src: url('../fonts/coolvetica rg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Grobold;
+    src: url('../fonts/GROBOLD.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* End Fonts */
 
 /* HTML5 display-role reset for older browsers */
 
@@ -153,15 +188,18 @@ body {
 
 a {
     text-decoration: none;
-    color: #131313;
+    color: rgba(152, 36, 126, 0.83);
+    font-weight: bold;
+    font-family: Cool;
+    font-size: 19px;
 }
 
-.home a {
-    color: white;
-}
+/*.home a {*/
+/*    color: white;*/
+/*}*/
 
 a:visited {
-    color: rgb(224, 224, 224);
+    color:  #434186;
 }
 
 #homeCarousel a {
@@ -180,7 +218,8 @@ h2 {
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 48px;
+    font-family: Funhouse;
 }
 
 h2 {
@@ -229,37 +268,54 @@ h2 {
 
 /* Home */
 .home {
+    text-align: center;
+    padding: 5%;
 }
+
+/*------------------ Nav -------------------*/
+.ombre-nav {
+    background-image: linear-gradient(to right, #0a849a, #434186, #ad084d);
+    height: 5vh;
+}
+
+.nav {
+}
+
+.nav-logo {
+    width: 5vh;
+    height: 100%;
+}
+/*------------------ End Nav -------------------*/
 
 /*------------------ Footer -------------------*/
 .upper-footer {
-    background: url('../images/bg_vs.png') top ;
-    font-size:15px;
-    line-height:24px;
+    background: url('../images/creature_footer.png') top;
+    font-size: 15px;
+    line-height: 24px;
     color: #28bfe1;
-    top: 0px;
-    background-size:cover;
+    top: 1px;
+    background-size: cover;
     height: 30vh;
 }
 
 .lower-footer {
-    bottom:1vh;
-    background-image: -webkit-linear-gradient(40deg, rgb(7, 77, 5) 50%, rgb(7, 77, 5) 50%);
-    height: 30vh;
+    background-image: -webkit-linear-gradient(40deg, #03500c 50%, #03500c 50%);
+    height: 20vh;
 }
 
 footer {
-    position:fixed;
-    left:0px;
-    bottom:0px;
-    width:100%;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
     z-index: 999;
 }
 
 .footer-img {
     object-fit: fill;
-    max-width:100%;
+    max-width: 100%;
 }
+
 /* --------------------- End Footer ------------------------- */
 
 
