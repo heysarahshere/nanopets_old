@@ -24,6 +24,8 @@ Route::get('/about', [
     'as' => 'about'
 ]);
 
+// ------------------------- User
+
 Route::get('/sign-in', [
     'uses' => 'App\Http\Controllers\UserController@getSignIn',
     'as' => 'sign-in'
@@ -51,3 +53,14 @@ Route::post('/sign-out', [
 // for future user things, i.e. profile or pets list
 //Route::group(['prefix' => 'user'], function () {
 //});
+
+// ------------------------- End User
+
+
+// ------------------------- Store
+
+Route::get('/store/featured', [
+    'uses' => 'App\Http\Controllers\StoreController@getStoreFeatured',
+    'as' => 'featured'
+]);
+// ------------------------- End Store

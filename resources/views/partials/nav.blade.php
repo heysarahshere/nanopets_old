@@ -42,6 +42,8 @@
                 </a>
                 <div class="dropdown-menu store-menu" aria-labelledby="navbarDropdown">
 
+                    <a class="dropdown-item" href="{{route('featured')}}">featured</a>
+                    <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">foods & potions</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">creature eggs</a>
