@@ -1,11 +1,13 @@
-<div style="height: 20vh">
-</div>
 <footer>
-    <!-- Upper Footer -->
-    <div class="col-12 upper-footer footer-img">
-        {{-- <img class="footer-img" src="{{asset(('images/bg_vs.png'))}}"/> --}}
+    <!-- Footer Spacing -->
+    <div class="col-12 footer-spacing">
     </div>
     <!-- End -->
+    <!-- Upper Footer -->
+    <div class="col-12 upper-footer footer-img">
+    </div>
+    <!-- End -->
+    <!-- Lower Footer -->
     <div class="col-12 lower-footer">
         <!-- Copyrights -->
         <div class="">
@@ -15,8 +17,5 @@
         </div>
         <!-- End -->
     </div>
-    <!-- Lower Footer -->
     <!-- End -->
-
 </footer>
-<!-- End -->

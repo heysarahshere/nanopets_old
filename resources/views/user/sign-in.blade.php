@@ -5,22 +5,19 @@
 @section('content')
 
     <div class="home">
-        <h1>SIGN IN</h1>
+        <h1>Sign In</h1>
     </div>
 
-<div class="col-6 pb-5">
-    <h1>Sign in</h1>
+<div class="col-md-4 col-sm-10 m-auto">
     <form method="POST" action="{{route('sign-in')}}">
         <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type="text" class="form-control" id="username" name="username" aria-describedby="emailHelp" placeholder="username">
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" placeholder="Password">
+            <input type="password" class="form-control" id="password" name="password" placeholder="password">
           </div>
-          @@csrf
-          <button type="submit" class="btn btn-primary">Submit</button>
+        {{ csrf_field() }}
+          <button class="rev-ombre-btn m-auto text-center" type="submit" class="btn btn-primary">submit</button>
+        <button class="ombre-btn m-auto text-center" class="btn btn-primary">forgot password?</button>
     </form></div>
 @endsection

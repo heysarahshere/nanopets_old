@@ -180,6 +180,7 @@ html {
 
 body {
     background-image: linear-gradient(#6de6fd, #34dffd);
+    background-size: auto;
     font-family: 'Roboto', Arial, sans-serif;
     font-size: 18px;
     font-weight: 300;
@@ -266,19 +267,53 @@ h2 {
     margin: 80px 0;
 }
 
-/* Home */
+/* Misc pages */
 .home {
     text-align: center;
     padding: 5%;
 }
 
+.store-menu a {
+    color: #0b6b8c;
+}
+
+.nav-account {
+    color: #6de6fd;
+    font-family: Readzone;
+    font-size: large;
+    font-weight: lighter;
+}
+/* End */
+
+/* Buttons */
+.ombre-btn {
+    font-family: Funhouse;
+    background-color: rgb(255, 255, 255);
+    border-radius: 34px;
+    border-color: #0b6b8c;
+    border-width: medium;
+    color: #0b6b8c;
+}
+.ombre-btn a:visited {
+    color: #0b6b8c;
+}
+
+.rev-ombre-btn {
+    font-family: Funhouse;
+    background-color: #0b6b8c;
+    border-radius: 34px;
+    border-color: #0b6b8c;
+    border-width: medium;
+    color: #ffffff;
+}
+.rev-ombre-btn a:visited {
+    color: #ffffff;
+}
+/* End */
 /*------------------ Nav -------------------*/
 .ombre-nav {
     background-image: linear-gradient(to right, #0a849a, #434186, #ad084d);
-    height: 5vh;
-}
-
-.nav {
+    /*height: 5vh;*/
 }
 
 .nav-logo {
@@ -311,15 +346,24 @@ h2 {
     height: 30vh;
 }
 
+.upper-footer {
+    height: 30vh;
+}
+
 .lower-footer {
     background-image: -webkit-linear-gradient(40deg, #03500c 50%, #03500c 50%);
     height: 20vh;
+    left: 0px;
+    bottom: 0px;
+}
+.footer-spacing {
+    min-height: 50vh;
 }
 
 footer {
-    position: fixed;
     left: 0px;
     bottom: 0px;
+    height: 20vh;
     width: 100%;
     z-index: 999;
 }
