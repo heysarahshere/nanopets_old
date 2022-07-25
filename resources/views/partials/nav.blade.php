@@ -1,4 +1,4 @@
-<div class="banner ombre-nav col-12">
+<div class="ombre-nav col-12">
     <div class="row align-items-center py-2 justify-content-end">
         @if(Auth::check())
             <?PHP $user = Auth::user(); ?>
@@ -9,8 +9,8 @@
             </form>
         @else
             <div class="col-12 text-right">
-                <a class="btn btn-sm ombre-btn" href="{{route('sign-in')}}">sign in</a>
-                <a class="btn btn-sm rev-ombre-btn" href="{{route('sign-up')}}">sign up</a>
+                <a  href="{{route('sign-in')}}"><button class="btn btn-sm rev-ombre-btn">sign in</button></a>
+                <a href="{{route('sign-up')}}"><button class="btn btn-sm ombre-btn">sign up</button></a>
             </div>
         @endif
     </div>
@@ -32,6 +32,9 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('about')}}">about</a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">creatures</a>
+            </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                    aria-haspopup="true" aria-expanded="false">
@@ -45,9 +48,6 @@
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">housing items</a>
                 </div>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">creatures</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">support</a>
