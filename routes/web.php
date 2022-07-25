@@ -13,18 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('home');
-//});
-
-//Route::get('/about', function () {
-//    return view('about');
-//});
-
-//Route::get(
-//    '/about',
-//    'App\Http\Controllers\Controller@getAbout'
-//);
 
 Route::get('/', [
     'uses' => 'App\Http\Controllers\Controller@getHome',
@@ -34,4 +22,9 @@ Route::get('/', [
 Route::get('/about', [
     'uses' => 'App\Http\Controllers\Controller@getAbout',
     'as' => 'about'
+]);
+
+Route::get('/sign-in', [
+    'uses' => 'App\Http\Controllers\Controller@getSignIn',
+    'as' => 'sign-in'
 ]);
