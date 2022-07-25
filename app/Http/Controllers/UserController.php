@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,7 +25,8 @@ class UserController extends Controller
             'firstname' => 'required|min:3',
             'lastname' => 'required|min:3',
             'email' => 'email|required|unique:users',
-            'password' => 'required|confirmed|min:6'
+            'password' => 'required|confirmed|min:6',
+            'password_confirmation' => 'required '
         ]);
 
         $user = new User([
@@ -41,7 +43,9 @@ class UserController extends Controller
 //        if ($request->has('sign-in-page')) {
 //            return redirect()->route('home')->with('message', "You're signed in.");
 //        }
-        return redirect()->back()->with('message', "You're signed in.");
+        return redirect()
+            ->route('home')
+            ->with('message', "You're signed in.");
     }
 
     public function postSignIn(Request $request)
