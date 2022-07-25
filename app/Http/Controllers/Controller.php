@@ -19,8 +19,4 @@ class Controller extends BaseController
     public function getAbout() {
         return view('about');
     }
-
-    public function getSignIn() {
-        return view('user/sign-in');
-    }
 }

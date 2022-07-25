@@ -25,6 +25,29 @@ Route::get('/about', [
 ]);
 
 Route::get('/sign-in', [
-    'uses' => 'App\Http\Controllers\Controller@getSignIn',
+    'uses' => 'App\Http\Controllers\UserController@getSignIn',
     'as' => 'sign-in'
 ]);
+
+Route::post('/sign-in', [
+    'uses' => 'App\Http\Controllers\UserController@postSignIn',
+    'as' => 'sign-in'
+]);
+
+Route::get('/sign-up', [
+    'uses' => 'App\Http\Controllers\UserController@getSignUp',
+    'as' => 'sign-up'
+]);
+
+Route::post('/sign-up', [
+    'uses' => 'App\Http\Controllers\UserController@postSignUp',
+    'as' => 'sign-up'
+]);
+
+Route::post('/sign-out', [
+    'uses' => 'App\Http\Controllers\UserController@postSignOut',
+    'as' => 'sign-out'
+]);
+// for future user things, i.e. profile or pets list
+//Route::group(['prefix' => 'user'], function () {
+//});
