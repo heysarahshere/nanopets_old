@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Egg;
+use App\Models\Food;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\DB;
@@ -19,8 +20,8 @@ class StoreController extends Controller
 
 
     public function getStoreFoods() {
-
-        return view('store/foods');
+        $foods = Food::orderBy('updated_at', 'desc')->paginate(12);
+        return view('store/foods',['foods' => $foods]);
     }
 
     public function getStoreEggs() {
