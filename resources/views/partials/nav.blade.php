@@ -5,7 +5,7 @@
             <p class="nav-account">Welcome, {{$user->username}}!</p>
             <a class="nav-link nav-account" href="#">settings</a>
             <form method="POST" action="{{route('sign-out')}}">{{ csrf_field() }}
-                <a class="btn btn-sm rev-ombre-btn mr-2" type="submit">sign out</a>
+                <button class="btn btn-sm rev-ombre-btn mr-2" type="submit">sign out</button>
             </form>
         @else
             <div class="col-12 text-right">
