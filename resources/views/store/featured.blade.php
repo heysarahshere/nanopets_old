@@ -7,7 +7,9 @@
     <div class="about-heading">
         <div class="container">
             <div class="row justify-content-center align-items-center m-auto">
-                <div class="col-7">
+                <div class="col-2">
+                </div>
+                <div class="col-5">
                     <h1>STORE</h1>
                     <p>Buy all the things</p>
                 </div>
