@@ -33,8 +33,8 @@
             </div>
 
             <div class="form-group">
-                <input type="password" class="form-control" name="confirm-password" id="confirm-password"
-                       placeholder="Password">
+                <input type="password" class="form-control" name="password_confirmation" id="password_confirmation"
+                       placeholder="confirm password">
             </div>
             {{ csrf_field() }}
             <div class="row text-center m-auto row align-items-center py-2 justify-content-center">
