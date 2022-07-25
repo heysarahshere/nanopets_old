@@ -63,4 +63,15 @@ Route::get('/store/featured', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreFeatured',
     'as' => 'featured'
 ]);
+
+Route::get('/store/foods', [
+    'uses' => 'App\Http\Controllers\StoreController@getStoreFoods',
+    'as' => 'foods'
+]);
+
+Route::get('/store/eggs', [
+    'uses' => 'App\Http\Controllers\StoreController@getStoreEggs',
+    'as' => 'eggs'
+]);
+
 // ------------------------- End Store

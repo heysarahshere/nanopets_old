@@ -8,4 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class Egg extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'image',
+        'element',
+        'description',
+        'potential',
+        'health',
+        'stamina',
+        'mojo',
+        'magic',
+        'strength',
+        'defense',
+        'hatchSpeed'
+    ];
 }

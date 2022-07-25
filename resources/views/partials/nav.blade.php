@@ -44,9 +44,9 @@
 
                     <a class="dropdown-item" href="{{route('featured')}}">featured</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">foods & potions</a>
+                    <a class="dropdown-item" href="{{route('foods')}}">foods & potions</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">creature eggs</a>
+                    <a class="dropdown-item" href="{{route('eggs')}}">creature eggs</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">housing items</a>
                 </div>

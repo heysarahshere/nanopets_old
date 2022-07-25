@@ -1,6 +1,6 @@
 @extends('layout.master')
 @section('title')
-    About
+    Featured
 @endsection
 @section('content')
 

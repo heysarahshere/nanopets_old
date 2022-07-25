@@ -1,0 +1,35 @@
+
+.store-heading {
+    background-image: linear-gradient(to right top, #27dfff, #baf5ff);
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
+.store-heading h2 {
+    font-size: 28px;
+    font-family: Readzone;
+}
+
+.store-featured-img {
+    width: 300px;
+    height: auto;
+}
+.store-body {
+    background-image: linear-gradient(to bottom, #96ecfd, #baf5ff);
+    height: 1000vh;
+}
+
+.store-body h1 {
+    color: #0a3c60;
+}
+
+.store-body p {
+    font-size: medium;
+    color: #602056;
+}
+
+
+/* ------------- elements as class names for dynamic card background --------------- */
+.fire {
+    background-image: linear-gradient(rgba(255, 83, 12, 0.27),#fc6e2f);
+}
+/* ------------- end elements as class names for dynamic card background --------------- */
