@@ -1,7 +1,9 @@
+<div style="height: 20vh">
+</div>
 <footer>
     <!-- Upper Footer -->
     <div class="col-12 upper-footer footer-img">
-        {{--        <img class="footer-img" src="{{asset(('images/bg_vs.png'))}}"/>--}}
+        {{-- <img class="footer-img" src="{{asset(('images/bg_vs.png'))}}"/> --}}
     </div>
     <!-- End -->
     <div class="col-12 lower-footer">

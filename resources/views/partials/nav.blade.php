@@ -14,9 +14,16 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('about')}}">About</a>
             </li>
+            @if(Auth::check())
+                
             <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="#">account</a>
             </li>
+            @else
+            <li class="nav-item">
+        <a class="nav-link" href="{{route('sign-in')}}">sign-in</a>
+            </li>
+            @endif
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown
