@@ -73,6 +73,7 @@ Route::get('/store/eggs', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreEggs',
     'as' => 'eggs'
 ]);
+Route::get('/eggs','StoreController@getEggs');
 
 Route::get('/store/potions', [
     'uses' => 'App\Http\Controllers\StoreController@getStorePotions',

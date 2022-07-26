@@ -19,6 +19,11 @@
                                 </div>
                             </div>
                             <div class="store-img-container">
+                                <div class="reveal-stats">
+                                    <button class="ombre-btn" data-toggle="modal" data-target="#eggModal{{$egg->id}}">
+                                        DETAILS
+                                    </button>
+                                </div>
                                 <img class="card-img-top" src="{{ Storage::disk('s3')->url($egg->image) }}"
                                      alt="{{ $egg->name }} Image">
                             </div>
@@ -29,6 +34,7 @@
                             <a href="#" class="btn btn-primary purchase-btn">Purchase</a>
                         </div>
                     </div>
+                    @include('partials.egg-stat-modal')
                 @endforeach
             </div>
         </div>
