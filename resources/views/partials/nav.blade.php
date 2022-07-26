@@ -33,16 +33,10 @@
                 <a class="nav-link" href="{{route('about')}}">about</a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="#">creatures</a>
+                <a class="nav-link" href="{{route('featured')}}">store</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                   aria-haspopup="true" aria-expanded="false">
-                    store
-                </a>
-                <div class="dropdown-menu store-menu" aria-labelledby="navbarDropdown">
-
-                </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="#">creatures</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="#">support</a>

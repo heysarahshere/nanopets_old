@@ -11,7 +11,6 @@
                 <div class="col-2">
                 </div>
                 <div class="col-5">
-                    <h1>STORE</h1>
                     <p>Buy all the things</p>
                 </div>
                 <div class="col-5 ml-auto">

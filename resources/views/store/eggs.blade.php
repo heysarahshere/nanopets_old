@@ -4,12 +4,11 @@
 @endsection
 @section('content')
     @include('partials.store-nav')
-    <div class="store-banner mt-2"><h2>CREATURE EGGS</h2></div>
     <div>
         <div class="container store-body text-center pt-4">
             <div class="row justify-content-center align-items-center m-auto">
                 @foreach($eggs as $egg)
-                    <div class="col-lg-3 col-sm-4">
+                    <div class="col-lg-3 col-sm-4 pb-5">
                         <div class="card store-card" style="width: 100%;">
                             <div class="{{ $egg->element }}-ombre-btn">
                                 <div class="row justify-content-center align-items-center mt-auto pt-2">
