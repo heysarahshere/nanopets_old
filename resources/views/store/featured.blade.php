@@ -3,6 +3,7 @@
     Featured
 @endsection
 @section('content')
+    @include('partials.store-nav')
 
     <div class="about-heading">
         <div class="container">

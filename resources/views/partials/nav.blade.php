@@ -42,13 +42,6 @@
                 </a>
                 <div class="dropdown-menu store-menu" aria-labelledby="navbarDropdown">
 
-                    <a class="dropdown-item" href="{{route('featured')}}">featured</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{route('foods')}}">foods & potions</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="{{route('eggs')}}">creature eggs</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">housing items</a>
                 </div>
             </li>
             <li class="nav-item active">

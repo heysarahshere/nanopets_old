@@ -3,6 +3,8 @@
     Food Stuffs
 @endsection
 @section('content')
+    @include('partials.store-nav')
+
     <div class="py-5 container">
         <h1>food</h1>
         <div class="row">

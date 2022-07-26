@@ -3,12 +3,10 @@
     Eggs
 @endsection
 @section('content')
-
+    @include('partials.store-nav')
+    <div class="store-banner mt-2"><h2>CREATURE EGGS</h2></div>
     <div>
-        <div class="container pt-5 store-body text-center">
-            <h1>Creature Eggs</h1>
-            <h2 style="color: #840e8d">Ready to hatch!</h2>
-            <hr>
+        <div class="container store-body text-center pt-4">
             <div class="row justify-content-center align-items-center m-auto">
                 @foreach($eggs as $egg)
                     <div class="col-lg-3 col-sm-4">
