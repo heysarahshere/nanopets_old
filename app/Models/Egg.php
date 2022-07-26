@@ -21,6 +21,7 @@ class Egg extends Model
         'magic',
         'strength',
         'defense',
-        'hatchSpeed'
+        'hatchSpeed',
+        'cost'
     ];
 }

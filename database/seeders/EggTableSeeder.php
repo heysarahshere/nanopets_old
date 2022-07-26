@@ -42,6 +42,39 @@ class EggTableSeeder extends Seeder
             'defense' => rand(15, 500),
             'strength' => rand(15, 500),
             'hatchSpeed' => rand(1,5),
+            'cost' => 55500
+        ]);
+
+        Egg::create([
+            'name' => "Galaxy Egg",
+            'image' => "/images/eggs/galaxy.png",
+            'element' => "star",
+            'description' => "Radioactive egg found on an asteroid. Very mysterious.",
+            'potential' => rand(0,8),
+            'health' => rand(15, 67),
+            'stamina' => rand(15, 500),
+            'mojo' => rand(0, 50),
+            'magic' => rand(15, 500),
+            'defense' => rand(15, 500),
+            'strength' => rand(15, 500),
+            'hatchSpeed' => rand(1,5),
+            'cost' => 60500
+        ]);
+
+        Egg::create([
+            'name' => "Gem Egg",
+            'image' => "/images/eggs/gem.png",
+            'element' => "rock",
+            'description' => "Is it really an egg, or is it just a cool gem? Who knows.",
+            'potential' => rand(0,8),
+            'health' => rand(15, 67),
+            'stamina' => rand(15, 500),
+            'mojo' => rand(0, 50),
+            'magic' => rand(15, 500),
+            'defense' => rand(15, 500),
+            'strength' => rand(15, 500),
+            'hatchSpeed' => rand(1,5),
+            'cost' => 10500
         ]);
     }
 }

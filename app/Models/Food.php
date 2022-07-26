@@ -14,6 +14,11 @@ class Food extends Model
         'image',
         'description',
         'magic',
+        'strength',
         'defense',
+        'health',
+        'breedableStat', // STRING: stat this food will effect when breeding
+        'breedableStatChance', // INT: % chance of the breedableStat being closer to the higher parent's stat
+        'cost'
     ];
 }

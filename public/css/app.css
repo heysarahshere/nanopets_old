@@ -91,8 +91,8 @@ html,
 body {
     height: 100%;
 }
-main {
 
+main {
     background-image: linear-gradient(#6de9ff, #00b7d2);
     background-size: cover;
     background-repeat: no-repeat;
@@ -106,12 +106,6 @@ body {
 }
 
 /* Fonts */
-/*@font-face {*/
-/*    font-family: Funhouse, Impact;*/
-/*    src: url('../fonts/Funhouse.ttf') format('truetype');*/
-/*    font-weight: normal;*/
-/*    font-style: normal;*/
-/*}*/
 
 @font-face {
     font-family: 'Funhouse';
@@ -307,6 +301,7 @@ p {
     font-size: large;
     font-weight: lighter;
 }
+
 
 /* End */
 

@@ -26,6 +26,7 @@ return new class extends Migration
             $table->integer('defense')->default(5); // scale 0-9999
             $table->integer('strength')->default(5); // scale 0-9999
             $table->integer('hatchSpeed')->default(1); // scale 0-5
+            $table->bigInteger('cost')->default(10000);
             $table->id();
             $table->timestamps();
         });

@@ -20,8 +20,13 @@ class FoodTableSeeder extends Seeder
                 'name' => "ice cream sandwich",
                 'image' => "/images/foods/limetwin.png",
                 'description' => "delicious frozen treat that increases your monsters magic and defense",
-                'magic' => 10,
-                'defense' => 5,
+                'magic' => rand(1, 20),
+                'strength' => rand(1, 20),
+                'defense' => rand(1, 20),
+                'health' => rand(1, 55),
+                'breedableStatChance' => rand(1, 30),
+                'breedableStat' => "magic",
+                'cost' => 2000,
             ]
         );
     }
