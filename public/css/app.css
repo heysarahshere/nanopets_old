@@ -106,12 +106,23 @@ body {
 }
 
 /* Fonts */
+/*@font-face {*/
+/*    font-family: Funhouse, Impact;*/
+/*    src: url('../fonts/Funhouse.ttf') format('truetype');*/
+/*    font-weight: normal;*/
+/*    font-style: normal;*/
+/*}*/
+
 @font-face {
-    font-family: Funhouse, Impact;
-    src: url('../fonts/Funhouse.ttf') format('truetype');
+    font-family: 'Funhouse';
+    src: url('../fonts/Funhouse.woff2') format('woff2'),
+    url('../fonts/Funhouse.woff') format('woff'),
+    url('../fonts/Funhouse.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
+
 
 @font-face {
     font-family: Readzone;
