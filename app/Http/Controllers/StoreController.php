@@ -14,25 +14,40 @@ use Illuminate\Support\Str;
 
 class StoreController extends Controller
 {
-    public function getStoreFeatured() {
+    public function getStoreFeatured()
+    {
         return view('store/featured', ['category' => "FEATURED", 'current' => 'featured']);
     }
 
 
-    public function getStoreFoods() {
+    public function getStoreFoods()
+    {
         $foods = Food::where('type', 'food')->orderBy('updated_at', 'desc')->paginate(12);
-        return view('store/foods',['foods' => $foods, 'category' => "FOODSTUFFS", 'current' => 'foods']);
+        return view('store/foods', ['foods' => $foods, 'category' => "FOODSTUFFS", 'current' => 'foods']);
     }
 
-    public function getStorePotions() {
+    public function getStorePotions()
+    {
 
         $foods = Food::where('type', 'potion')->orderBy('updated_at', 'desc')->paginate(8);
         return view('store/foods', ['foods' => $foods, 'category' => "POTIONS", 'current' => 'potions']);
     }
 
-    public function getStoreEggs() {
+    public function getStoreEggs()
+    {
 
         $eggs = Egg::orderBy('updated_at', 'desc')->paginate(8);
         return view('store/eggs', ['eggs' => $eggs, 'category' => "CREATURE EGGS", 'current' => 'eggs']);
     }
+
+    public function getEggs()
+    {
+            $eggs = Egg::orderby('id','asc')->paginate(8);
+        // Fetch all records
+        $userData['eggs'] = $eggs;
+
+        echo json_encode($userData);
+        exit;
+    }
+
 }

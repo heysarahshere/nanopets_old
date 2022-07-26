@@ -1,4 +1,36 @@
 
+.store-card {
+    z-index: 1;
+}
+
+.store-card:hover {
+    transition-timing-function: ease-in;
+    transition: 0.2s;
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    z-index: 999;
+}
+
+.store-card .reveal-stats {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}
+
+.store-card:hover .reveal-stats {
+    height: auto;
+    visibility: visible;
+    opacity: 10;
+    transition: opacity .5s ease;
+}
+
+
 .store-body h1 {
     color: #0a3c60;
 }
@@ -120,6 +152,17 @@
     border-color: #0b6b8c;
     border-width: medium;
     color: #ffffff;
+}
+
+.statModal .modal-body h2 {
+    color: #0a3c60;
+    font-size: medium;
+}
+
+.modal-title {
+    color: #000000;
+    text-align: center;
+    margin-left: auto;
 }
 
 
