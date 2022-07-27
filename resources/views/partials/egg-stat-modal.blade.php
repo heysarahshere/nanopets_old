@@ -16,7 +16,7 @@
                              alt="{{ $egg->name }} Image">
                     </div>
                     <div class="col-6 m-0 text-left">
-                        <div class="row"><h2 style="color: black">Element:&nbsp; </h2>
+                        <div class="row"><h2 style="color: black">Type:&nbsp; </h2>
                             <h2 style="color: #da3a09">{{ $egg->element }}</h2></div>
                         <div class="row"><h2 style="color: black">Health:&nbsp; </h2>
                             <h2 style="color: #b90404">{{ $egg->health }}</h2></div>
