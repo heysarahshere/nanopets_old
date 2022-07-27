@@ -24,6 +24,7 @@ class Food extends Model
         'mojo', // breeding success chance
         'breedableStat', // STRING: stat this food will effect when breeding
         'breedableStatChance', // INT: % chance of the breedableStat being closer to the higher parent's stat
-        'cost'
+        'cost',
+        'owner_id',
     ];
 }

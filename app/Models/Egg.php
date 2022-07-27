@@ -22,6 +22,7 @@ class Egg extends Model
         'strength',
         'defense',
         'hatchSpeed',
-        'cost'
+        'cost',
+        'owner_id',
     ];
 }

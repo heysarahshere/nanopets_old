@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('eggs', function (Blueprint $table) {
+            $table->integer('owner_id')->nullable();
             $table->string('name');
             $table->string('image', 500)->default('empty_cat.png');
             $table->string('element');

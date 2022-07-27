@@ -8,4 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Monster extends Model
 {
     use HasFactory;
+    
+    protected $fillable = [
+        'name',
+        'image',
+        'element',
+        'description',
+        'health',
+        'stamina',
+        'mojo',
+        'magic',
+        'strength',
+        'defense',
+        'level',
+        'owner_id',
+    ];
+
+
 }

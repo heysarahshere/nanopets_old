@@ -31,6 +31,7 @@ return new class extends Migration
 //        'breedableStatChance', // INT: % chance of the breedableStat being closer to the higher parent's stat
 //        'cost'
 
+            $table->integer('owner_id')->nullable();
             $table->string('name');
             $table->string('image');
             $table->string('type')->default("food"); // alternative would be potion - allows easy sorting

@@ -14,6 +14,19 @@ return new class extends Migration
     public function up()
     {
         Schema::create('monsters', function (Blueprint $table) {
+            $table->integer('owner_id');
+            $table->string('name');
+            $table->string('image', 500)->default('empty_cat.png');
+            $table->string('element');
+            $table->text('description');
+            $table->integer('potential');
+            $table->integer('health');
+            $table->integer('stamina');
+            $table->integer('mojo');
+            $table->integer('magic');
+            $table->integer('defense');
+            $table->integer('strength');
+            $table->integer('level');
             $table->id();
             $table->timestamps();
         });
