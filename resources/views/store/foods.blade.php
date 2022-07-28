@@ -33,5 +33,10 @@
                 @endforeach
             </div>
         </div>
+        <div class="row" style="position: relative">
+            <div class="col pt-3 mr-auto">
+                {{ $foods->links() }}
+            </div>
+        </div>
     </div>
 @endsection

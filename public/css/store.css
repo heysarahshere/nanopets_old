@@ -165,7 +165,10 @@
     margin-left: auto;
 }
 
-
+.add-button {
+    margin: 0 auto;
+    align-self: center;
+}
 /* ------------- elements as class names for dynamic card background --------------- */
 .fire {
     background-image: linear-gradient(#fcaa2f, rgb(208, 64, 9));

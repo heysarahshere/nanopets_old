@@ -59,6 +59,8 @@ Route::post('/sign-out', [
 
 // ------------------------- Store
 
+Route::get('/eggs','StoreController@getEggs'); // for ajax request
+
 Route::get('/store/featured', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreFeatured',
     'as' => 'featured'
@@ -69,11 +71,20 @@ Route::get('/store/foods', [
     'as' => 'foods'
 ]);
 
+Route::get('/store/add-food', [
+    'uses' => 'App\Http\Controllers\StoreController@getAddFood',
+    'as' => 'add-food'
+]);
+
+Route::post('/store/foods', [
+    'uses' => 'App\Http\Controllers\StoreController@postAddFood',
+    'as' => 'add-food-post'
+]);
+
 Route::get('/store/eggs', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreEggs',
     'as' => 'eggs'
 ]);
-Route::get('/eggs','StoreController@getEggs');
 
 Route::get('/store/potions', [
     'uses' => 'App\Http\Controllers\StoreController@getStorePotions',
