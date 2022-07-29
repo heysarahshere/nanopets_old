@@ -18,7 +18,16 @@ class StoreController extends Controller
 {
     public function getStoreFeatured()
     {
-        return view('store/featured', ['category' => "FEATURED", 'current' => 'featured']);
+        $foods = Food::where('type', 'food')->orderBy('updated_at', 'desc')->paginate(8);
+        $potions = Food::where('type', 'potion')->orderBy('updated_at', 'desc')->paginate(8);
+        $eggs = Egg::orderBy('updated_at', 'desc')->paginate(8);
+        return view('store/featured', [
+            'foods' => $foods,
+            'potions' => $potions,
+            'eggs' => $eggs,
+            'category' => "FEATURED",
+            'current' => 'featured'
+        ]);
     }
 
 
@@ -26,12 +35,12 @@ class StoreController extends Controller
     public function getStoreFoods()
     {
         $foods = Food::where('type', 'food')->orderBy('updated_at', 'desc')->paginate(8);
-        return view('store/foods', ['foods' => $foods, 'category' => "FOODSTUFFS", 'current' => 'foods']);
+        return view('store/food/all', ['foods' => $foods, 'category' => "FOODSTUFFS", 'current' => 'foods']);
     }
 
     public function getAddFood()
     {
-        return view('store/add-food');
+        return view('store/food/add-food');
     }
 
     public function postAddFood(Request $request)
@@ -63,7 +72,7 @@ class StoreController extends Controller
         ]);
 
             $file = $request->file('image');
-            $filename = "/images/foods/" . trim($request->input('name')) . time() . "." . $file->getClientOriginalExtension();  // multiple extension types
+            $filename = trim("/images/foods/" . $request->input('name') . time()) . "." . $file->getClientOriginalExtension();  // multiple extension types
             if($request->hasFile('image')){
 
                 Storage::disk('public')->put($filename, File::get($file));
@@ -77,7 +86,7 @@ class StoreController extends Controller
     public function postDeleteFood($id) {
         $food = Food::find($id);
         $food->delete();
-        return redirect('store/foods');
+        return redirect('store/food/all');
     }
 
     public function postUpdateFood(Request $request, $id)
@@ -112,7 +121,7 @@ class StoreController extends Controller
 
         if($request->has('image')) {
             $file = $request->file('image');
-            $filename = $request->input('name') . time() . $file->getClientOriginalExtension();  // multiple extension types
+            $filename = trim("/images/foods/" . $request->input('name') . time()) . $file->getClientOriginalExtension();  // multiple extension types
             if($request->hasFile('image')){
                 Storage::disk('public')->put($filename, File::get($file));
                 $food->image = $filename;
@@ -121,13 +130,13 @@ class StoreController extends Controller
 
         $food->save();
 
-        return redirect('store/foods');
+        return redirect('store/food/all');
     }
 
     public function getUpdateFood($id)
     {
         $food = Food::find($id);
-        return view('store/edit-food', ['food' => $food]);
+        return view('store/food/edit-food', ['food' => $food]);
     }
 // --------------------------------------------------------------------------------------------- end food
 
@@ -135,20 +144,20 @@ class StoreController extends Controller
     {
 
         $foods = Food::where('type', 'potion')->orderBy('updated_at', 'desc')->paginate(8);
-        return view('store/foods', ['foods' => $foods, 'category' => "POTIONS", 'current' => 'potions']);
+        return view('store/food/all', ['foods' => $foods, 'category' => "POTIONS", 'current' => 'potions']);
     }
 
     public function getStoreEggs()
     {
 
         $eggs = Egg::orderBy('updated_at', 'desc')->paginate(8);
-        return view('store/eggs', ['eggs' => $eggs, 'category' => "CREATURE EGGS", 'current' => 'eggs']);
+        return view('store/eggs/all', ['eggs' => $eggs, 'category' => "CREATURE EGGS", 'current' => 'eggs']);
     }
 
     public function getEggs()
     {
         $eggs = Egg::orderby('id', 'asc')->paginate(8);
-        // Fetch all records
+
         $userData['eggs'] = $eggs;
 
         echo json_encode($userData);
