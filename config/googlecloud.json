@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nanopets",
+  "private_key_id": "b2ea5a2780266ec45561623d75ac249032fd9b38",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCzeccjzRQY5cqw\nSJDqSP21vtwjkYFzSiDqENLgJzEFGiZfjg3HbjVqzkAN81d9m8oJjC8uDCyhmuVA\nNar+cgWp1d+pOTWSsAIqBDTClV1A7xeTKwa+ARrdsDbRFAOLgD+f3wR/6ZRzSqAY\nWDXvaRZGeQk6oDdrlXvw46e/OBEEWzu+8WEEw9/68+x/8pFZuI0/8plZ27UZKQXp\nxcAYy7IhFeADeKMjwG/jl1xIb/BcbZdfo39Pkg+OmTp/fr0YmOPSJJr59mjWR+rx\niUDh/Cb+GetQflpdkxfJFJRtYG7LGklvXqX5OBgakMpsmyFXN8H+9cFeAVAJWvkH\nMhiPdiXrAgMBAAECggEAErv+fo00sNijzLz2a45M9YDDx+6zXY56WxSAfqd4pXiy\nUr0oUQ3/A3QeGZayJklx0IdSkXLx4biif45amA7c6nqJy0dOgU5gG3Su8TTYNCQB\nCPqvzHufC08OmcqGCDTN72k/Nf7y4QoEJiZnEuOcUKTnwrfgsRk8g8uvwfUfSZ3z\nRUYHqdreXY3tII5LzYx1ea+Z0itYsdKAAJBtI20Hhx26n6sF2FxlAZjZdxrLRWMk\n1aUU971Rz0OgE4JX9BUZXmsNuexQkNi8soapnQ4EwuAEyi9pN+3Ic8IyVuK7ryf3\nIt2eJnFP6c1lreRclYAI1MRPbPY9fxe4d/+R7TxOCQKBgQDzWdx4fkYU89iIizOB\nbsxmtxQF5bQUbv5ZaT8tp1utbGZF1YFsZ2TNP8iIge8m6AzRs8M5kIrNrUA9p6B+\niysqmPkApZ2FuM83GXL22MsPOuTcj/upARNavLvs5Bg39+rE/Z1742UC471UEZof\nj65n6LSolK7JFN19HF/GA3H9LQKBgQC8zfZzGelyP5CkyhHv7Ztk6SbkhGOxr2X+\nTYqpgBAle0WY2t2sVkNo77Q34SMuj3426qKKpU8flJR5meuC+vWL4vkUGYTp9QuG\nGvIY8xbnmumg6Zd76SqD/2lgzoJO7bFvAhkkPsihBC7m+7ClNDj+5fmwhSctDmpE\nDr6kPsUOdwKBgQDZf/SEoV/j9DoReFD1m2EHYRR9XNvB855TrbSxCkbvTtZuDjDa\nAeNfa2XBVFi6rmZeu0t+1MiqofGr6XmSALL5JLZRNLUAwrg55/4P0J5VI29QD0R/\nvh1dWRih1xAqXeQwYvjxtMEgfwpF7GGTWekoqB1oG1PJF2QLIWQcaBHmlQKBgQCp\nMzsls5cOGAEcbSreBeY47Ok56ZseZb3VxM/7TxUpQewBLEN0ampG5GpxmYXZ+CZ4\nOJYqAjOCbbkRsOrqmtTq5CGr7aK7uCr3p7ZGvbNNI/szhaOIHFFJsd9SLj+BVGqq\nvQqi/ND327PctLp9kutxI9A8bVfKfRymmUAoGUinyQKBgQCIjQCJTrDQ4mDqKwVO\nHDzXsDNlGkJRpdBhfFFqXaRmnIhU5iOSzx33/Ib3LNAadKM8k/fBej4GgtKURlqC\nNrSHrnHVxhNzKW4JWNX5PWJfV2/PHXB8dpnT9kE0RClWvzfb0v4BK9nMrWhOLx43\nrSUn6i1qLoVjrDM64tLBSc4FNg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sarah-nanopets@nanopets.iam.gserviceaccount.com",
+  "client_id": "106126599601607756511",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sarah-nanopets%40nanopets.iam.gserviceaccount.com"
+}

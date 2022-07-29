@@ -65,7 +65,7 @@ Route::get('/store/featured', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreFeatured',
     'as' => 'featured'
 ]);
-
+// --------------------------------------------------------------------------------------------- food
 Route::get('/store/foods', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreFoods',
     'as' => 'foods'
@@ -80,6 +80,22 @@ Route::post('/store/foods', [
     'uses' => 'App\Http\Controllers\StoreController@postAddFood',
     'as' => 'add-food-post'
 ]);
+
+Route::post('/adoptable/{id}', [
+    'uses' => 'App\Http\Controllers\StoreController@postDeleteFood',
+    'as' => 'delete-food'
+]);
+
+Route::get('/adoptable/update/{id}', [
+    'uses' => 'App\Http\Controllers\StoreController@getUpdateFood',
+    'as' => 'update-food'
+]);
+
+Route::post('/adoptable/update/{id}', [
+    'uses' => 'App\Http\Controllers\StoreController@postUpdateFood',
+    'as' => 'post-update-food'
+]);
+// --------------------------------------------------------------------------------------------- end food
 
 Route::get('/store/eggs', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreEggs',

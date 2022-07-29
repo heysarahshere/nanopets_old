@@ -4,9 +4,10 @@
 @endsection
 @section('content')
 
+    <div class="store-banner mt-5"><h2>Create Food</h2></div>
     <div class="container py-4">
         <form method="POST" action="{{route('add-food-post')}}" enctype="multipart/form-data">
-            <h1 class="text-center pb-5">Add Food</h1>
+
 
             <div class="row">
 
@@ -171,7 +172,7 @@
                         <div style="display: block" id="upload" class="custom-file col-md-12 col-lg-12 pb-2">
                             <input type="file" class="custom-file-input" id="image" name="image" accept="image/*"
                                    onchange="document.getElementById('output').src = window.URL.createObjectURL(this.files[0])">
-                            <label class="custom-file-label" for="image1">Choose image...</label>
+                            <label class="custom-file-label" for="image">Choose image...</label>
                         </div>
                     </div>
                 </div>
@@ -223,23 +224,11 @@
 
         // image preview script
         document.querySelector('.custom-file-input').addEventListener('change', function (e) {
-            var fileName = document.getElementById("image1").files[0].name;
+            var fileName = document.getElementById("image").files[0].name;
             var nextSibling = e.target.nextElementSibling;
             nextSibling.innerText = fileName;
         });
 
-        // uploader visibility script
-        function showUploader(checkBoxId) {
-            if (checkBoxId === 1) {
-                var checkBox = document.getElementById("add_image");
-                var upload = document.getElementById("upload");
-                if (checkBox.checked === true) {
-                    upload.style.display = "block";
-                } else {
-                    upload.style.display = "none";
-                }
-            }
-        }
     </script>
 
 @endsection
