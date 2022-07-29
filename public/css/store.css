@@ -1,6 +1,54 @@
 
+.featured-jumbo {
+    background-color: white;
+    border-radius: 10px;
+    border-color: rgb(102, 210, 16);
+    border-width: medium;
+}
+.featured-burger {
+
+    background-color: #FFB534;
+    border-radius: 10px;
+    border-color: #FFB534;
+    border-width: medium;
+}
+.featured-egg {
+
+    background-color: #C2005B;
+    border-radius: 10px;
+    border-color: #C2005B;
+    border-width: medium;
+}
 .store-card {
     z-index: 1;
+}
+
+.potion-container-button {
+    background-image: linear-gradient(to right, #9157b6, #d59bf8);
+    color: #602056;
+}
+
+.egg-container-button {
+    background-image: linear-gradient(to right, #0060ce, #5a9fd3);
+    color: #0a3c60;
+}
+
+.food-container-button {
+    background-image: linear-gradient(to right, #be5e14, #ce955b);
+
+}
+
+[class*="container-button"] {
+    height: 30vh;
+    border-radius: 10px;
+    border-color: #C2005B;
+    border-width: medium;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
 
 .store-card:hover {
@@ -280,16 +328,16 @@
 
 /* ________________________ */
 .strength {
-    background-color: #bd6105;
+    background-color: #bd5805;
     border-radius: 10%;
     margin: 5%;
 }
 
 .strength-ombre-btn {
-    background-color: #bd6105;
+    background-color: #bd5805;
     border-radius: 24px;
     margin: 5%;
-    border-color: #bd6105;
+    border-color: #bd5805;
     border-width: 0px;
 }
 .strength-ombre-btn h1 {
@@ -349,16 +397,16 @@
 }
 /* ________________________ */
 .hunger {
-    background-color: #c77f13;
+    background-color: #dea106;
     border-radius: 10%;
     margin: 5%;
 }
 
 .hunger-ombre-btn {
-    background-color: #c77f13;
+    background-color: #dea106;
     border-radius: 24px;
     margin: 5%;
-    border-color: #c77f13;
+    border-color: #dea106;
     border-width: 0px;
 }
 .hunger-ombre-btn h1 {

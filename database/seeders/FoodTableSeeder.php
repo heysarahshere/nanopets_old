@@ -66,7 +66,7 @@ class FoodTableSeeder extends Seeder
         Food::create(
             [
                 'name' => "Mojo Pop",
-                'image' => "/images/foods/mojo.png",
+                'image' => "/images/foods/mojopot.png",
                 'description' => "Date night juice pop - made to share!",
                 'mainStat' => "mojo",
                 'mojo' => rand(50, 145),
@@ -80,7 +80,7 @@ class FoodTableSeeder extends Seeder
         Food::create(
             [
                 'name' => "Mojo Potion",
-                'image' => "/images/potions/mojo.png",
+                'image' => "/images/potions/mojopot.png",
                 'description' => "Date night juice - small serving!",
                 'mainStat' => "mojo",
                 'mojo' => rand(99, 145),
