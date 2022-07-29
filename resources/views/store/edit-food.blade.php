@@ -1,13 +1,13 @@
-
 @extends('layout.master')
 @section('title')
-    Add Food
+    Update Food
 @endsection
 @section('content')
 
-    <div class="store-banner mt-5"><h2>Create Food</h2></div>
+    <div class="store-banner mt-5"><h2>Update Food</h2></div>
     <div class="container py-4">
-        <form method="POST" action="{{route('add-food-post')}}" enctype="multipart/form-data">
+        <form method="POST" action="{{route('post-update-food', ['id' => $food->id])}}" enctype="multipart/form-data">
+
             <div class="row">
 
                 {{-- details --}}
@@ -20,7 +20,7 @@
                                type="text"
                                name="name"
                                placeholder="food name"
-                               value="{{ old('name') }}">
+                               value="{{ $food->name }}">
                     </div>
 
                     <h2 class="ml-3">Price:</h2>
@@ -31,19 +31,19 @@
                                name="cost"
                                placeholder="price"
                                min="0.01" step="0.01" max="999999"
-                               value="{{ old('cost') }}">
+                               value="{{ $food->cost }}">
                     </div>
                     <h2 class="ml-3 my-3">Description:</h2>
                     <div class="form-row mb-4">
                         <textarea class="form-control form-control-lg" id="description" name="description"
                                   placeholder="Tastes like chicken!"
-                                  value="{{ old('description') }}">{{ old('name') }}</textarea>
+                                  value="{{ $food->description }}">{{ $food->description }}</textarea>
                     </div>
 
                     <div class="row">
                         <div class="col-md-6">
                             <select class="form-control form-control" id="type" name="type">
-                                <option selected disabled value="">food type</option>
+                                <option selected disabled value="">{{ $food->type }}</option>
                                 <option value="food">solid</option>
                                 <option value="potion">liquid</option>
                             </select>
@@ -51,7 +51,7 @@
                         <div class="col-md-6">
                             <select class="form-control form-control" id="mainStat" name="mainStat"
                                     onchange="enableSlider(this.value)">
-                                <option selected disabled value="">main stat</option>
+                                <option selected disabled value="{{ $food->mainStat }}">{{ $food->mainStat }}</option>
                                 <option>health</option>
                                 <option>hunger</option>
                                 <option>magic</option>
@@ -75,7 +75,7 @@
                         </div>
                         <div class="slidecontainer mt-1">
                             <input class="slider" type="range" id="healthInput" name="healthInput" min="0" max="5000"
-                                   value="0"
+                                   value="{{ $food->health }}"
                                    oninput="setStatLevel(this.value, this.id)">
                         </div>
                         <div class="row ml-3">
@@ -84,7 +84,7 @@
                         </div>
                         <div class="slidecontainer mt-1">
                             <input class="slider" type="range" id="magicInput" name="magicInput" min="-500" max="1000"
-                                   value="0"
+                                   value="{{ $food->magic }}"
                                    oninput="setStatLevel(this.value, this.id)">
                             <output id="magicInputLevel" name="magicInputLevel" for="magicInput"></output>
                         </div>
@@ -95,7 +95,7 @@
                         </div>
                         <div class="slidecontainer mt-1">
                             <input class="slider" type="range" id="strengthInput" name="strengthInput" min="-500" max="1000"
-                                   value="0"
+                                   value="{{ $food->strength }}"
                                    oninput="setStatLevel(this.value, this.id)">
                             <output id="strengthInputLevel" name="strengthInputLevel" for="strengthInput"></output>
                         </div>
@@ -106,7 +106,7 @@
                         </div>
                         <div class="slidecontainer mt-1">
                             <input class="slider" type="range" id="staminaInput" name="staminaInput" min="-500" max="1000"
-                                   value="0"
+                                   value="{{ $food->stamina }}"
                                    oninput="setStatLevel(this.value, this.id)">
                             <output id="staminaInputLevel" name="staminaInputLevel" for="staminaInput"></output>
                         </div>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="slidecontainer mt-1">
                             <input class="slider" type="range" id="defenseInput" name="defenseInput" min="-500" max="1000"
-                                   value="0"
+                                   value="{{ $food->defense }}"
                                    oninput="setStatLevel(this.value, this.id)">
                             <output id="defenseInputLevel" name="defenseInputLevel" for="defenseInput"></output>
                         </div>
@@ -126,7 +126,7 @@
                         </div>
                         <div class="slidecontainer mt-1">
                             <input class="slider" type="range" id="hungerInput" name="hungerInput" min="-500" max="1000"
-                                   value="0"
+                                   value="{{ $food->hunger }}"
                                    oninput="setStatLevel(this.value, this.id)">
                             <output id="hungerInputLevel" name="hungerInputLevel" for="hungerInput"></output>
                         </div>
@@ -136,7 +136,7 @@
                         </div>
                         <div class="slidecontainer mt-1">
                             <input class="slider" type="range" id="mojoInput" name="mojoInput" min="-500" max="1000"
-                                   value="0"
+                                   value="{{ $food->mojo }}"
                                    oninput="setStatLevel(this.value, this.id)">
                             <output id="mojoInputLevel" name="mojoInputLevel" for="mojoInput"></output>
                         </div>
@@ -147,7 +147,7 @@
                         </div>
                         <div class="slidecontainer mt-1">
                             <input class="slider" type="range" id="statChanceInput" name="statChanceInput" min="-500" max="1000"
-                                   value="0"
+                                   value="{{ $food->breedingStatChance }}"
                                    oninput="setStatLevel(this.value, this.id)">
                             <output id="statChanceInputLevel" name="statChanceInputLevel" for="statChanceInput"></output>
                         </div>
@@ -190,11 +190,33 @@
 
     </div>
     <script type="text/javascript">
-        function enableSlider(name) {
-            // document.getElementById('name').value = name;
-            // var select = document.getElementById('mainStat');
-            // var statValue = select.options[select.selectedIndex].text;
 
+
+        document.addEventListener("load", function(){
+
+            // //Get select object
+            // var objSelect = document.getElementById("mainStat");
+            // setSelectedValue(objSelect, );
+            //
+            // function setSelectedValue(selectObj, valueToSet) {
+            //     for (var i = 0; i < selectObj.options.length; i++) {
+            //         if (selectObj.options[i].text== valueToSet) {
+            //             selectObj.options[i].selected = true;
+            //             return;
+            //         }
+            //     }
+            // }
+
+            document.getElementById("healthInputLevel").value = document.getElementById("healthInput").value;
+            document.getElementById("magicInputLevel").value = document.getElementById("healthInput").value;
+            document.getElementById("strengthInputLevel").value = document.getElementById("healthInput").value;
+            document.getElementById("staminaInputLevel").value = document.getElementById("healthInput").value;
+            document.getElementById("defenseInputLevel").value = document.getElementById("healthInput").value;
+            document.getElementById("hungerInputLevel").value = document.getElementById("healthInput").value;
+            document.getElementById("mojoInputLevel").value = document.getElementById("healthInput").value;
+            document.getElementById("statChanceInputLevel").value = document.getElementById("healthInput").value;
+        });
+        function enableSlider(name) {
             [
                 'health',
                 'magic',
@@ -229,3 +251,4 @@
     </script>
 
 @endsection
+

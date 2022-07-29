@@ -9,8 +9,8 @@
             </form>
         @else
             <div class="col-12 text-right">
-                <a  href="{{route('sign-in')}}"><button class="btn btn-sm rev-ombre-btn">sign in</button></a>
-                <a href="{{route('sign-up')}}"><button class="btn btn-sm ombre-btn">sign up</button></a>
+                <a  href="{{route('get-sign-in')}}"><button class="btn btn-sm rev-ombre-btn">sign in</button></a>
+                <a href="{{route('get-sign-up')}}"><button class="btn btn-sm ombre-btn">sign up</button></a>
             </div>
         @endif
     </div>

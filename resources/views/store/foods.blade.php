@@ -13,7 +13,7 @@
                         <div class="card store-card" style="width: 100%;">
                             <div class="{{ $food->mainStat }}-ombre-btn">
                                 <div class="row justify-content-center align-items-center mt-auto pt-2">
-                                    <i class="fa-solid fa-coins pr-2 pb-2" style="color: #4d3c06;font-size: 30px"></i>
+                                    <i class="fa-solid fa-coins pr-2 pb-2" style="font-size: 30px"></i>
                                     <h2 class="text-center">
                                         {{ $food->cost }}
                                     </h2>
@@ -55,8 +55,11 @@
                 @endforeach
             </div>
         </div>
-        <div class="row">
+        <div class="container">
+            <div class="row m-auto">
                 {{ $foods->links() }}
+            </div>
         </div>
+
     </div>
 @endsection

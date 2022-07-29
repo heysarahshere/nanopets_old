@@ -28,7 +28,7 @@ Route::get('/about', [
 
 Route::get('/sign-in', [
     'uses' => 'App\Http\Controllers\UserController@getSignIn',
-    'as' => 'sign-in'
+    'as' => 'get-sign-in'
 ]);
 
 Route::post('/sign-in', [
@@ -38,7 +38,7 @@ Route::post('/sign-in', [
 
 Route::get('/sign-up', [
     'uses' => 'App\Http\Controllers\UserController@getSignUp',
-    'as' => 'sign-up'
+    'as' => 'get-sign-up'
 ]);
 
 Route::post('/sign-up', [
@@ -81,17 +81,17 @@ Route::post('/store/foods', [
     'as' => 'add-food-post'
 ]);
 
-Route::post('/adoptable/{id}', [
+Route::post('/store/{id}', [
     'uses' => 'App\Http\Controllers\StoreController@postDeleteFood',
     'as' => 'delete-food'
 ]);
 
-Route::get('/adoptable/update/{id}', [
+Route::get('/store/update/{id}', [
     'uses' => 'App\Http\Controllers\StoreController@getUpdateFood',
     'as' => 'update-food'
 ]);
 
-Route::post('/adoptable/update/{id}', [
+Route::post('/store/update/{id}', [
     'uses' => 'App\Http\Controllers\StoreController@postUpdateFood',
     'as' => 'post-update-food'
 ]);
