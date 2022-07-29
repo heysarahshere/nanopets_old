@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Contracts\Filesystem\Filesystem;
-use Spatie\FlysystemDropbox\DropboxAdapter;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,6 +30,8 @@ class AppServiceProvider extends ServiceProvider
 //            \URL::forceScheme('https');
             $this->app['request']->server->set('HTTPS', true);
         }
+
+        Paginator::useBootstrap();
 
     }
 }

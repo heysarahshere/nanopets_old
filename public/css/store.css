@@ -313,3 +313,54 @@
 .mojo-ombre-btn h1 {
     color: white;
 }
+/* ________________________ */
+.stamina {
+    background-color: #1fc713;
+    border-radius: 10%;
+    margin: 5%;
+}
+
+.stamina-ombre-btn {
+    background-color: #1fc713;
+    border-radius: 24px;
+    margin: 5%;
+    border-color: #1fc713;
+    border-width: 0px;
+}
+.stamina-ombre-btn h1 {
+    color: white;
+}
+/* ________________________ */
+.statChance {
+    background-color: #1337c7;
+    border-radius: 10%;
+    margin: 5%;
+}
+
+.statChance-ombre-btn {
+    background-color: #1337c7;
+    border-radius: 24px;
+    margin: 5%;
+    border-color: #1337c7;
+    border-width: 0px;
+}
+.statChance-ombre-btn h1 {
+    color: white;
+}
+/* ________________________ */
+.hunger {
+    background-color: #c77f13;
+    border-radius: 10%;
+    margin: 5%;
+}
+
+.hunger-ombre-btn {
+    background-color: #c77f13;
+    border-radius: 24px;
+    margin: 5%;
+    border-color: #c77f13;
+    border-width: 0px;
+}
+.hunger-ombre-btn h1 {
+    color: white;
+}
