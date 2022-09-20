@@ -27,11 +27,6 @@
                                  alt="Burger Image">
                         </div>
                     </div>
-                </div>
-                <div class="col-3 featured-egg store-card">
-                    <div class="row justify-content-around m-auto">
-                        <div class="col-12 p-2 pt-4 m-auto text-center">
-                            <h1 style="position: absolute; left: 10%; top: 10%; color: #00b7d2">NEW!</h1>
                             <img class="card-img-top p-1"
                                  src="{{ Storage::disk('public')->url('/images/eggs/mystic.png') }}"
                                  alt="Burger Image" style="width: 100%">

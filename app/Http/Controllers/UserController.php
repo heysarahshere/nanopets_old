@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pet;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -80,6 +81,17 @@ class UserController extends Controller
         return redirect()
             ->route('home')
             ->with('message', "You've been signed out.");
+    }
+
+
+    public function getProfile()
+    {
+        $id = Auth::id();
+
+        $pets = Pet::where('owner_id', $id)->get();
+        return view('user/profile', [
+            'pets' => $pets
+        ]);
     }
 
 }

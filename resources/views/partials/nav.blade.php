@@ -2,7 +2,9 @@
     <div class="row align-items-center py-2 justify-content-end">
         @if(Auth::check())
             <?PHP $user = Auth::user(); ?>
-            <p class="nav-account">Welcome, {{$user->username}}!</p>
+            <a class="nav-link nav-account" href="{{route('profile')}}">
+                <p class="nav-account">Welcome, {{$user->username}}!</p>
+            </a>
             <a class="nav-link nav-account" href="#">settings</a>
             <form method="POST" action="{{route('sign-out')}}">{{ csrf_field() }}
                 <button class="btn btn-sm rev-ombre-btn mr-2" type="submit">sign out</button>

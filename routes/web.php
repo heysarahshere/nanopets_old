@@ -26,40 +26,48 @@ Route::get('/about', [
 
 // ------------------------- User
 
-Route::get('/sign-in', [
-    'uses' => 'App\Http\Controllers\UserController@getSignIn',
-    'as' => 'get-sign-in'
-]);
-
-Route::post('/sign-in', [
-    'uses' => 'App\Http\Controllers\UserController@postSignIn',
-    'as' => 'sign-in'
-]);
-
-Route::get('/sign-up', [
-    'uses' => 'App\Http\Controllers\UserController@getSignUp',
-    'as' => 'get-sign-up'
-]);
-
-Route::post('/sign-up', [
-    'uses' => 'App\Http\Controllers\UserController@postSignUp',
-    'as' => 'sign-up'
-]);
-
-Route::post('/sign-out', [
-    'uses' => 'App\Http\Controllers\UserController@postSignOut',
-    'as' => 'sign-out'
-]);
 // for future user things, i.e. profile or pets list
-//Route::group(['prefix' => 'user'], function () {
-//});
+Route::group(['prefix' => 'user'], function () {
+
+    Route::get('/sign-in', [
+        'uses' => 'App\Http\Controllers\UserController@getSignIn',
+        'as' => 'get-sign-in'
+    ]);
+
+    Route::post('/sign-in', [
+        'uses' => 'App\Http\Controllers\UserController@postSignIn',
+        'as' => 'sign-in'
+    ]);
+
+    Route::get('/sign-up', [
+        'uses' => 'App\Http\Controllers\UserController@getSignUp',
+        'as' => 'get-sign-up'
+    ]);
+
+    Route::post('/sign-up', [
+        'uses' => 'App\Http\Controllers\UserController@postSignUp',
+        'as' => 'sign-up'
+    ]);
+
+    Route::post('/sign-out', [
+        'uses' => 'App\Http\Controllers\UserController@postSignOut',
+        'as' => 'sign-out'
+    ]);
+
+
+    Route::get('/profile', [
+        'uses' => 'App\Http\Controllers\UserController@getProfile',
+        'as' => 'profile'
+    ]);
+
+});
 
 // ------------------------- End User
 
 
 // ------------------------- Store
 
-Route::get('/eggs','StoreController@getEggs'); // for ajax request
+Route::get('/eggs', 'StoreController@getEggs'); // for ajax request
 
 Route::get('/store/featured', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreFeatured',
@@ -95,7 +103,8 @@ Route::post('/store/update/{id}', [
     'uses' => 'App\Http\Controllers\StoreController@postUpdateFood',
     'as' => 'post-update-food'
 ]);
-// --------------------------------------------------------------------------------------------- end food
+// ---------------------------------------- end food
+// --------------------------------------------------------------------------------------------- store
 
 Route::get('/store/eggs', [
     'uses' => 'App\Http\Controllers\StoreController@getStoreEggs',
