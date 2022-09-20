@@ -44,3 +44,16 @@
     margin-left: 2%;
     margin-bot: 2%;
 }
+
+.monster-parent {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.monster-child {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 100%;
+}

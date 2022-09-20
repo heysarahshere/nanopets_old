@@ -14,6 +14,24 @@ return new class extends Migration
     public function up()
     {
         Schema::create('pets', function (Blueprint $table) {
+            $table->integer('owner_id');
+            $table->string('name');
+            $table->string('line_image', 500);
+            $table->string('color_image', 500);
+            $table->string('eye_image', 500);
+            $table->string('tail_image', 500);
+            $table->string('head_image', 500);
+            $table->string('wing_image', 500);
+            $table->string('element');
+            $table->text('description');
+            $table->integer('potential');
+            $table->integer('health');
+            $table->integer('stamina');
+            $table->integer('mojo');
+            $table->integer('magic');
+            $table->integer('defense');
+            $table->integer('strength');
+            $table->integer('level');
             $table->id();
             $table->timestamps();
         });
